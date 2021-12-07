@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+        <title>14조</title>
+        <meta charset="UTF-8">
+        <style>
+            #myCanvas{background:#000000; border: #909090 1px solid; }
+        </style>
+</head>
+
+<body>
+<center>
+<br>
+  <h1>< 메리 종강 ></h1>
+  <p>새로고침 하면서 봐주세요!</p>
+  <br>
+  <h3>팀원</h3>
+  <P>22157003 김가영</P>
+  <p>22157064 조하경</p>
+  <br>
+  <canvas id="myCanvas" width="800" height="800"> 
+    이 문장은 사용자의 웹 브라우저가 canvas 요소를 지원하지 않을 때 나타납니다!
+  </canvas>
+
+  <script>
+    var paper = document.getElementById("myCanvas");
+    var context = paper.getContext("2d");
+        var r,g,b,a,size,x,y;
+      
+      //나무
+      
+     context.moveTo(400, 230);
+    context.lineTo(220, 280);
+    context.lineTo(400, 90);
+    context.lineTo(580, 280);
+    context.fillStyle = "green";
+    context.fill();
+
+    context.moveTo(400, 400);
+    context.lineTo(580, 440);
+    context.lineTo(400, 90);
+    context.lineTo(220, 430);
+    context.fillStyle = "green";
+    context.fill();
+      
+    context.moveTo(400, 620);
+    context.lineTo(580, 620);
+    context.lineTo(400, 90);
+    context.lineTo(210, 620);
+    context.fillStyle = "green";
+    context.fill();
+      
+        context.fillStyle = "brown";
+        context.fillRect(360, 620, 70, 115);
+      
+       //빨간전구
+    
+       context.fillStyle = "rgba(255,0,0,1)";
+    for (var i=2; i<6; i++) {
+        context.fillRect(310+i*40, 1+i*50, 8, 15);
+        }
+      
+        context.fillStyle = "rgba(255,0,0,1)";
+    for (var i=3; i<10; i++) {
+        context.fillRect(210+i*40, 1+i*50, 8, 15);
+        }
+      
+       context.fillStyle = "rgba(255,0,10,1)";
+    for (var i=4; i<12; i++) {
+        context.fillRect(110+i*40, 1+i*50, 8, 15);
+        }
+      
+        context.fillStyle = "rgba(255,10,0,1)";
+    for (var i=7; i<13; i++) {
+        context.fillRect(8+i*40, 1+i*50, 8, 15);
+        }
+      
+        context.fillStyle = "rgba(255,0,0,1)";
+    for (var i=10; i<13; i++) {
+        context.fillRect(-110+i*40, 1+i*50, 8, 15);
+        }
+      
+    context.fillStyle = "rgba(255,0,0,1)";
+    for (var i=11; i<13; i++) {
+        context.fillRect(-210+i*40, 1+i*50, 8, 15);
+        }
+    
+      // 노란전구
+    
+      context.fillStyle = "rgba(210,200,10,1)";
+    for (var i=2; i<6; i++) {
+        context.fillRect(490+i*-40, 1+i*50, 8, 15);
+        }
+      
+        context.fillStyle = "rgba(210,200,10,1)";
+    for (var i=3; i<9; i++) {
+        context.fillRect(580+i*-40, 1+i*50, 8, 15);
+        }
+      
+        context.fillStyle = "rgba(210,200,10,1)";
+    for (var i=5; i<12; i++) {
+        context.fillRect(680+i*-40, 1+i*50, 8, 15);
+        }
+    
+      context.fillStyle = "rgba(210,200,10,1)";
+    for (var i=7; i<13; i++) {
+        context.fillRect(790+i*-40, 1+i*50, 8, 15);
+        }
+    
+        context.fillStyle = "rgba(210,200,10,1)";
+    for (var i=10; i<13; i++) {
+        context.fillRect(910+i*-40, 1+i*50, 8, 15);
+        }
+      
+     // 배경
+      
+          for (var i=0; i<800; i=i+30) {
+               r=Math.round(Math.random()*255);
+               g=Math.round(Math.random()*255);
+               b=Math.round(Math.random()*255);
+               a=Math.random();
+               size=Math.round(Math.random()*30+5);
+            
+                x = Math. round(Math.random()*800);
+                y = Math. round(Math.random()*800);
+            
+            
+               context.beginPath();
+               context.fillStyle="rgba("+r+","+g+","+b+","+a+")";   
+               context.arc(x, y, size, 0, Math.PI*2);
+               context.fill();
+               }
+
+               // 눈
+    
+    context.fillStyle = "white"
+    context.fillRect(0, 730, 800, 70);
+    
+    context.beginPath();
+    context.arc(650, 730, 10, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(630, 730, 15, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(750, 730, 15, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(450, 730, 25, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(80, 730, 10, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(30, 730, 25, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(250, 730, 10, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(300, 730, 15, 0, 2 * Math.PI);
+    context.fill();
+    
+    //눈사람
+    
+  context.beginPath();
+    context.arc(150, 680, 60, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(150, 600, 40, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.fillStyle = "rgba(210,200,250,1)"  
+    context.beginPath();
+    context.arc(150, 650, 8, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(150, 680, 8, 0, 2 * Math.PI);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(150, 710, 8, 0, 2 * Math.PI);
+    context.fill();
+
+    </script>
+
+    <h3>작업 소개</h3>
+  <p>21일 종강을 맞으면 곧바로 크리스마스가 다가옵니다 !</p>
+  <p>종강 후 후련한 마음으로 행복하게 크리스마스를 즐길 내 모습을 생각하면서 작업했습니다.</p>
+  <p>배경에 눈 내리는 크리스마스 밤 반짝이는 야경의 분위기 그리고 귀여운 눈사람을 넣어 화이트 크리스마스를 표현했습니다!</p>
+  <p>교수님, 모든 동기 여러분 메리 종강입니다!</p>
+</center>
+</body>
+</html>
